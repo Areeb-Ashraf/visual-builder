@@ -20,6 +20,7 @@ Create 4-6 logical steps that build upon each other. For each step, provide:
 2. A detailed description explaining the concept
 3. A specific image prompt for DALL-E (be very descriptive, mention style, colors, composition)
 4. A voiceover script that's engaging and educational (2-3 sentences)
+5. A short caption for the step (similar to the title but can be slightly different)
 
 Return your response as a JSON array with this exact structure:
 [
@@ -27,7 +28,8 @@ Return your response as a JSON array with this exact structure:
     "title": "Step title here",
     "description": "Detailed explanation here",
     "image_prompt": "Detailed image description here",
-    "voiceover_script": "Engaging narration script here"
+    "voiceover_script": "Engaging narration script here",
+    "caption": "Short caption for this step"
   }
 ]
 
@@ -83,19 +85,22 @@ Topic: ${topic}`;
         title: `Introduction to ${topic}`,
         description: `Welcome to our lesson about ${topic}. We'll explore this concept step by step.`,
         image_prompt: `Educational illustration showing an overview of ${topic}, clean and simple style, bright colors`,
-        voiceover_script: `Welcome to our lesson about ${topic}. Today we'll learn about this fascinating concept together.`
+        voiceover_script: `Welcome to our lesson about ${topic}. Today we'll learn about this fascinating concept together.`,
+        caption: `Introduction to ${topic}`
       },
       {
         title: `Understanding ${topic}`,
         description: `Let's dive deeper into what ${topic} really means and why it's important.`,
         image_prompt: `Detailed diagram explaining ${topic}, educational style, clear labels and arrows`,
-        voiceover_script: `Now let's understand what ${topic} really means and why it's so important to learn about.`
+        voiceover_script: `Now let's understand what ${topic} really means and why it's so important to learn about.`,
+        caption: `Understanding ${topic}`
       },
       {
         title: `${topic} in Action`,
         description: `Here's how ${topic} works in real-world situations.`,
         image_prompt: `Real-world example of ${topic} in action, photorealistic style, clear and educational`,
-        voiceover_script: `Here's how you can see ${topic} working in the real world around us.`
+        voiceover_script: `Here's how you can see ${topic} working in the real world around us.`,
+        caption: `${topic} in Action`
       }
     ];
   }
